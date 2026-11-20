@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-obsidian: #141513;
+  --color-warm-stone: #E8E5DC;
+  --color-concrete: #A7A69F;
+  --color-olive: #777C68;
+  --color-paper: #F8F7F2;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F8F7F2;
+    color: #141513;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-editorial {
+    font-family: var(--font-serif);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom hairline architectural scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8E5DC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #777C68;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #141513;
+}
+
+/* Editorial clip-path reveal helpers */
+.clip-reveal-initial {
+  clip-path: inset(0 0 100% 0);
+}
+
+.clip-reveal-visible {
+  clip-path: inset(0 0 0% 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

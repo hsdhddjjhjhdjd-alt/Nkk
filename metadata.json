@@ -1,0 +1,6 @@
+{
+  "name": "ARCHVERSE",
+  "description": "An immersive digital architectural exhibition and interactive spatial design platform exploring brutalist, futuristic, organic, and parametric structures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
